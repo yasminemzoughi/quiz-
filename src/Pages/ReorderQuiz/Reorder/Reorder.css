@@ -1,0 +1,69 @@
+.main_content {
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  width: 100% !important;
+}
+.reorder-quiz-Card {
+  background-color: aliceblue !important;
+  width: 100%;
+  margin-bottom: 4% !important;
+  box-shadow:  2px 4px 2px rgba(43, 39, 39, 0.1);
+
+}
+.timer-card-wrap {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100%;
+}
+.quiz-reorder-titel{
+  justify-content: center;
+  text-align: center;
+  margin: 2%;
+
+}
+.answers_container{
+  margin: 0 auto;
+}
+.answer{
+  justify-content: center;
+  text-align: center !important;
+}
+
+/* next button */
+#quiz-reorder-submit {
+  border-radius: 6px;
+  background-color: rgb(37, 196, 164);
+  color: white;
+  border: white;  width: 30%;
+  height: 5vh;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 2% auto;
+}
+#quiz-reorder-submit:hover{
+  color: black;
+  border: black !important;
+
+}
+/* progressbar */
+.progressBar {
+  width: 100% !important;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: -1%; ;
+  z-index: 999 !important;
+}
+
+.card-progressBar-container{
+display: flex;
+flex-direction: column;
+}
+/* feedback */
+.feedback{
+  width: 100% !important;
+  margin-top: 2%;
+}

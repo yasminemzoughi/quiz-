@@ -1,0 +1,202 @@
+.CreateQuiz-modal {
+  min-width: 900%;
+}
+.home {
+  background-color: #ffffff;
+  max-width: 100%;
+  margin: 3% auto;
+  border-radius: 0.5rem;
+  padding: 3%;
+}
+/* form */
+.intro-form {
+  padding: 0 !important;
+  margin: 2% 10%;
+  background-color: rgb(12, 96, 126);
+  color: #ffffff;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.input-form-add-quiz {
+  margin: 0 auto !important;
+}
+.modal-body {
+  overflow: hidden;
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+}
+.modal-buttons-form {
+  margin: 5% auto;
+  border-radius: 6px;
+  background-color: rgb(41, 143, 118);
+  color: rgb(255, 255, 255);
+  width: 20%;
+  box-shadow: -15px -15px 15px rgba(255, 255, 255, 0.2),
+    15px 15px 15px rgba(0, 0, 0, 0.1),
+    inset -5px -5px 5px rgba(255, 255, 255, 0.2),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer;
+}
+
+
+.form3 {
+  align-items: center;
+  line-height: normal;
+  display: flex;
+  flex-direction: row !important;
+}
+.add-question-answer-button {
+  width: 40%;
+  border-radius: 6px;
+  margin: auto 2%;
+}
+.input-add,
+.question-contex {
+  border-radius: 6px;
+  margin: 0 2% !important;
+  resize: none;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+.buttons-edit-delete {
+  justify-content: space-around !important;
+}
+/* Quiz table */
+.intro-box {
+  position: relative;
+  display: grid;
+  grid-template-columns: calc(100% - 70px) 70px;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(6, 57, 75);
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  color: rgb(166, 235, 206);
+}
+
+.intro-texts {
+  z-index: 9;
+}
+
+.intro-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--light-color);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.intro-description {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+.intro-icon {
+  width: 0px;
+  display: grid;
+  place-items: center;
+  border-radius: 0.5rem;
+}
+.intro-icon i {
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+.level-boxes {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  position: relative;
+  display: grid;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+}
+.level-box {
+  width: 100%;
+  border-radius: 1rem;
+  background-color: #8adfce;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.level-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  justify-content: center;
+  align-items: center;
+}
+.level-name {
+  font-size: 1rem;
+  color: var(--text-color);
+  font-weight: 600;
+}
+.level-text span {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.level-link {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  border-radius: 0.5rem;
+  background-color: rgb(41, 116, 143);
+  color: white !important;
+  padding: 0.75rem;
+  text-decoration: none;
+}
+.modal-table {
+  width: 900px;
+}
+/* full try */
+.button-input-container {
+  display: flex !important;
+  align-items: center;
+}
+
+.question-element-title {
+  background-color: rgb(215, 244, 231);
+  border: 3px solid black;
+  border-radius: 6px;
+  align-items: center;
+  margin: 0.5% auto;
+  color: black;
+  padding: 1% !important;
+  line-height: normal !important;
+}
+#switch-container {
+  flex: initial !important;
+  flex-direction: column;
+  margin: 20% !important;
+}
+.ant-switch-handle {
+  flex: 0 !important;
+  flex-grow: 0;
+}
+.ant-form-item-control-input-content {
+  flex: none !important;
+}
+.collapse {
+  display: flex;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 6px !important;
+  overflow: hidden;
+  margin: 20px auto !important;
+  color: #2c11a1;
+  border:  #2c11a1 2px solid;
+}

@@ -1,0 +1,65 @@
+.quiz-truefalse-Card {
+  background-color: #f7f1ed !important;
+  border-radius: 10px;
+  box-shadow: 0px 2px 8px rgba(43, 39, 39, 0.1);
+  padding: 1%;
+  text-align: center;
+  margin-top: 6%;
+}
+
+.quiz-truefalse-Card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 50%;
+}
+.timer-card-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+/* buttons css */
+.quiz-truefalse-btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  appearance: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 22px;
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+.quiz-truefalse-btn:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+.quiz-truefalse-btn-green {
+  background-color: #2ecc71 !important;
+  box-shadow: 0px 5px 0px 0px #15b358;
+}
+
+.quiz-truefalse-btn-red {
+  background-color: #e74c3c !important;
+  box-shadow: 0px 5px 0px 0px #ce3323;
+}
+/* new css */
+.buttons-input-container{
+  justify-content: center;
+  align-items: center !important;
+  display: flex;
+}
+.input-field{
+  margin: 2%;
+}
+.q-conatiner{
+  background-color: #ace1d7;
+   margin:10px;
+    padding:1%;
+    border-radius: 6px;
+}

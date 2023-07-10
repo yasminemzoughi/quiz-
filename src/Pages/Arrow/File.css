@@ -1,0 +1,77 @@
+.mycard {
+  justify-content: space-around;
+  margin: -2% auto;
+  background-color: aliceblue;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 30rem;
+  padding: 2%;
+  text-align: center;
+  position: relative;
+
+}
+#color {
+  margin: 100px;
+}
+
+.wrapping {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#goTONext,
+#goBack {
+  width: 100px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 4%;
+}
+#goTONext:hover,
+#goBack:hover {
+  background-color: lightslategray;
+  cursor: pointer;
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+/* popup  */
+.quiz-arrow {
+  padding: 15px;
+  justify-content: center;
+  border-radius: 5px;
+  margin: 4% auto;
+  background-color: aliceblue !important;
+  max-width:18rem;
+}
+
+.quiz-arrow h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+.quiz-arrow-restart {
+  cursor: pointer;
+  border-radius: 6px;
+  width: 50%;
+  height: 5vh;
+  color: white;
+  margin: 2% auto;
+}
+.quiz-arrow-restart:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+.quiz-arrow-gif{
+  width: 100%;
+  padding: 2%;
+  border-radius: 10% !important;
+  justify-content: center !important;
+}
+/* feedback */
+.feedback{
+  z-index: 999 !important;
+  width: 30rem;
+
+
+}

@@ -1,0 +1,36 @@
+.Select-card {
+  width: 20rem;
+  text-align: center;
+  padding: 1%;
+  background-color: aliceblue !important;
+  margin-top:-2% ;
+}
+#quiz-select-buttons {
+  display: flex;
+  margin: 2%;
+  justify-content: space-around!important;
+  border-radius: 6px;
+}
+#select-button-next {
+  border-radius: 6px;
+  background-color: blue;
+  color: white;
+}
+#select-button-submit {
+  border-radius: 6px;
+  background-color: green;
+  color: white;
+}
+#quiz-select-option {
+  justify-content: center;
+  margin: 2%;
+  text-align: center;
+}
+#quiz-select-option:hover{
+  background-color: lightblue;
+}
+
+.answer-section{
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,75 @@
+
+.main-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+}
+.mycard {
+  background-color: aliceblue !important;
+  border-radius: 4%;
+  justify-content: center;
+  text-align: center;
+  margin-top: -2%;
+}
+.timer-card-fill {
+  display: flex;
+  flex-direction: column;
+  align-items:center !important;
+  justify-content: center; 
+
+}
+
+#Submit {
+  background-color: lightpink;
+  border-radius: 6px;
+  padding: 2%;
+  color: black;
+  margin: 4%;
+  width: 5rem;
+  cursor: pointer;
+}
+#Submit:hover {
+  background-color: rgb(51, 209, 51);
+}
+#Submit:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 1px 1px 1px 1px;
+}
+
+.myModal {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 90% !important;
+}
+.modal-open {
+  overflow: visible !important;
+}
+.myModal h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.myModal p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.myModal button {
+  background-color: #ff4081;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 8px 16px;
+  transition: background-color 0.3s ease;
+}
+
+.myModal button:hover {
+  background-color: #ff70a8;
+}

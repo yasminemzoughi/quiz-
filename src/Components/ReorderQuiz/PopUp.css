@@ -1,0 +1,46 @@
+.quiz-reorder-card {
+    padding: 15px;
+    justify-content: center;
+    border-radius: 5px;
+    margin: 4%;
+    background-color: aliceblue !important;
+    width: 16rem;
+  }
+  
+  .quiz-reorder-card h2 {
+    margin-top: 0;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .quiz-reorder-card p {
+    font-weight: bold;
+    margin-bottom: 20px;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .quiz-reorder-restart {
+    cursor: pointer;
+    background-color: rgb(0, 117, 128);
+    border-radius: 4%;
+    width: 50%;
+    justify-content: center;
+    height: 5vh;
+    color: white;
+    margin: 2% auto; 
+  }
+  .quiz-reorder-gif{
+    width: 100%;
+    padding: 2%;
+    margin: 1%;
+  }
+  .quiz-reorder-restart:hover {
+    background-color: orange !important;
+  }
+  .quiz-reorder-restart:active {
+    transform: translate(0px, 5px);
+    -webkit-transform: translate(0px, 5px);
+    box-shadow: 0px 1px 0px 0px;
+  }
+  

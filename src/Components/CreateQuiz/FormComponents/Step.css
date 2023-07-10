@@ -1,0 +1,43 @@
+/* new css */
+.question-element{
+align-items: center !important;
+justify-content: center !important;
+justify-content:space-around !important;
+background-color: aliceblue;
+display: flex;
+border:2px solid black;
+border-radius: 6px;
+width: 100%;
+margin: 4px;
+}
+/* new css */
+.question-container{
+    border: solid 1px black;
+    display: flex;
+    align-items: center;
+padding: 20px !important;}
+
+  .answer-box{
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 6px !important;
+    overflow: hidden;
+    color: #11a148;
+    border: #11a148 2px solid;
+    display: flex;
+    flex-direction: row;
+    padding: 4px;
+  }
+  .step1And2{
+line-height: 0% !important;
+  }
+  .according{
+    max-width: 500px;
+    align-items: center;
+    justify-content: center;
+    margin: 2% auto;
+  }
+  .according-answer{
+    display: flex;
+    align-items: center;
+  }

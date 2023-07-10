@@ -1,0 +1,92 @@
+
+.main_content{
+  align-items: center !important;
+  
+}
+.multichoice-quiz-Card {
+  padding: 5px;
+  background-color: rgb(130, 229, 204) !important;
+  justify-content: center !important;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.timer-card-wrap{
+  display: flex;
+  flex-direction: column;
+  align-items:center !important;
+}
+#Question {
+  justify-content: center;
+  text-align: center;
+}
+.answer-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  column-gap: 10px;
+  justify-content: center;
+}
+
+.answer-section .Choicebutton {
+  font-size: 20px;
+  width: 50%;
+  height: 7vh;
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  padding: 8px 16px;
+  background-color: rgb(210, 232, 227)  !important;
+  margin: 2%;
+  border-radius: 6px;
+}
+
+#corectAnswer {
+  text-size-adjust: 50px;
+  height: 5vh;
+}
+
+@media (max-width: 300px) {
+  #Question {
+    font-size: 20px;
+  }
+  p {
+    font-size: 20px;
+  }
+  .answer-section {
+    padding: 20px 30px;
+  }
+  .Choicebutton {
+    font-size: 18px;
+    padding: 8px 16px;
+    background-color: rgb(19, 171, 141)  !important;
+    margin: 2%;
+  }
+}
+
+.show-footer p {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+#Almost-there {
+  background-color: #FEECEC;
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#Great-work {
+  background-color: lightgreen;
+  border-radius: 6px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

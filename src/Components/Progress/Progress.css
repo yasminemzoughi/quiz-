@@ -1,0 +1,116 @@
+/* progress */
+.progress-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: var(--first-color);
+  border-radius: 1rem;
+  padding: 1.5rem 2rem 0 2rem;
+}
+.progress-top {
+  display: grid;
+  grid-template-columns: calc(100% - 70px) 70px;
+  gap: 0.5rem;
+  align-items: center;
+}
+.progress-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--light-color);
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.progress-description {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+.progress-icon {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 0.5rem;
+  background-color: var(--opacity-first);
+}
+.progress-icon i {
+  font-size: 1.25rem;
+  color: var(--text-color);
+}
+.progress-bottom {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 125px calc(100% - 125px);
+  align-items: center;
+  gap: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-color: var(--second-color);
+  padding: 1.5rem;
+  overflow: hidden;
+}
+.progress-bottom::before {
+  content: "";
+  position: absolute;
+  left: 40%;
+  bottom: -25px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 7px solid var(--opacity-second);
+  z-index: 0;
+}
+.progress-bottom::after {
+  content: "";
+  position: absolute;
+  left: 85%;
+  top: -25px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--opacity-second);
+  z-index: 0;
+}
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(rgb(188, 108, 108)) !important;
+  z-index: 1;
+}
+.progress-big {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+.progress-mini {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-color);
+  margin-top: 0.75rem;
+}
+.progress-detail {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  z-index: 1;
+}
+.progress-circle.time {
+  --percentage: var(--value);
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(
+      closest-side,
+      var(--bg-color) 85%,
+      transparent 0 99.9%,
+      white 0
+    ),
+    conic-gradient(
+      var(--first-color) calc(var(--percentage) * 1%),
+      var(--body-bg) 0
+    ) !important;
+}
