@@ -1,24 +1,32 @@
 import React, { useState } from 'react';
 import { Button, Form, Steps, message, theme } from 'antd';
+import { v4 as uuidv4 } from 'uuid';
 
 import NewQuizModal from '../NewQuizModal';
-import Step0 from './Step0';
-import Step1 from './FillForm';
+import FillForm from './FillForm';
 import Step2 from './TrueFalseForm';
-import Step from './Step';
 import TabForm from './TabForm';
-import Step4 from './DnDForm';
-import Step5 from './PicForm';
-import DnD from './DnDPreview';
+import DnDForm from './DnDForm';
+import PicForm from './PicForm';
+import DnDPreview from './DnDPreview';
+import FillPreview from './FillPreview';
+import DragPicPreview from './DragPicPreview';
+import NewNew from "./NewNew"
 
-const FormSteps = () => {
+const FormS = () => {
   const { token } = theme.useToken();
   const [current, setCurrent] = useState(0);
   const [form] = Form.useForm();
-  const [questions, setQuestions] = useState([]);
   const [answers, setAnswers]= useState([])
   const [showAnswers, setShowAnswers]= useState(false)
-  const [tableData, setTableData] = useState([{key:"0", phrase: '', correctAnswer: '' , answer: null,}]);
+  // drag and drop phrase/definition
+  const [tableData, setTableData] = useState([{key:uuidv4(), phrase: '', correctAnswer: '' , answer: null,}]);
+// text area fill in the blanks 
+const [paragraph, setParagraph]= useState("");
+// drag drop pic
+const [list, setList]= useState([]);
+const [uploadedImage, setUploadedImage] = useState(null);
+
 
   const next = () => {
     form.validateFields().then((values) => {
@@ -41,19 +49,30 @@ const FormSteps = () => {
     marginTop: 16,
     padding: '2%',
   };
+
+
+
   const steps = [
-    {
-      title: 'array creation',
-      content: <Step0 />,
-    },
+   
     {
       title: 'Tableau correspondance',
       content: <TabForm />,
     },
+    // {
+    //   title: 'Tableau correspondance',
+    //   content: <NewNew />,
+    // },
     {
-      title: 'fill in the blanks',
-      content: <Step1 
+      title: 'fill in the blanks form',
+      content: <FillForm
+      setParagraph={setParagraph}
       />,      
+    },
+    {
+      title: 'fill-in-blanks preview',
+      content: <FillPreview 
+      paragraph={paragraph}
+      />,
     },
     {
       title: 'true false',
@@ -68,7 +87,7 @@ const FormSteps = () => {
    
     {
       title: 'phrase/definition',
-      content: <Step4
+      content: <DnDForm
       tableData={tableData}
       setTableData={setTableData}
       
@@ -76,23 +95,31 @@ const FormSteps = () => {
       />
     },
     {
-      title: 'preview',
-      content: <DnD
+      title: 'DnD preview',
+      content: <DnDPreview
       tableData={tableData}
       
       />
     },
     {
-      title: 'dnd image',
-      content: <Step5 />
+      title: 'Pic Form',
+      content: <PicForm
+      setList={setList}
+ setUploadedImage={setUploadedImage}
+ uploadedImage={uploadedImage}
 
+      
+      />
     },
-
     {
-      title: 'question/réponse',
-      content: <Step questions={questions} setQuestions={setQuestions} answers={answers} setAnswers={setAnswers} />
+      title: 'Drag Pic Preview',
+      content: <DragPicPreview
+      list={list}
+      uploadedImage={uploadedImage}
+      />
 
     },
+    
   ];
   const items = steps.map((item) => ({
     key: item.title,
@@ -138,4 +165,4 @@ const FormSteps = () => {
   );
 };
 
-export default FormSteps;
+export default FormS;

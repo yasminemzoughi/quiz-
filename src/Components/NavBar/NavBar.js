@@ -16,6 +16,8 @@ const NavBar = () => {
             <Nav.Link href="/Arrow">Arrow</Nav.Link>
             <Nav.Link href="/DropDown">DropDown</Nav.Link>
             <Nav.Link href="/FormSteps">FormSteps</Nav.Link>
+            <Nav.Link href="/FormS">FormS</Nav.Link>
+
             <Nav.Link href="/fill-in-the-blanks-2">fill-in-2</Nav.Link>
             <Nav.Link href="/DnD">DnD</Nav.Link>
             <Nav.Link href="/DnDTable">DnDTable</Nav.Link>

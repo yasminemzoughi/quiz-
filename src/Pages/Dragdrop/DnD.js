@@ -1,6 +1,4 @@
-import { Button } from 'antd';
 import React, { useState } from 'react';
-import "./Dragdrop.css"
 
 const jomla = [
   { phrase: "Sécrètent un liquide diluant le sperme", answer: null , correctAnswer:"Glandes de Cowper"},
@@ -18,15 +16,6 @@ const DnD = () => {
 //extract array from correct answer
   const data = jomla.map(item => item.correctAnswer);
 console.log("data", data)
-
-// randomize the array el
-// const randomizeTable = [...data]; // Create a copy of data
-// for (let i = data.length - 1; i > 0; i--) {
-//   const j = Math.floor(Math.random() * (i + 1));
-//   [data[i], data[j]] = [data[j], data[i]];
-// }
-// console.log("randomizeTable",randomizeTable)
-
 
 // dragdrop logic
   const handleDragStart = (event, item) => {
@@ -61,21 +50,23 @@ console.log("data", data)
   };
 
   return (
-    <div>
+    <div style={{lineHeight:"2"}}>
       <div>
         {data.map((item, index) => (
-          <span className='elmentcl'
+          <span
             key={index}
             draggable
             onDragStart={(event) => handleDragStart(event, item)}
             style={{
               display: 'inline-block',
-              margin: '4px',
+              margin: '6px',
               userSelect: 'none',
               border: "2px solid black",
               borderRadius: "6px",
-              padding: "1%",
+              padding: "0.5%",
               cursor:"grab",
+              backgroundColor:"green",
+              color:"white"
             }}
           >
             {item}
@@ -99,7 +90,7 @@ console.log("data", data)
           marginLeft: "4px",
           marginBottom: "6px",
           borderRadius: "4px",
-          width: "20%",
+          width: "30%",
           backgroundColor: item.answer ? "#C2DEDC" : "whitesmoke",
           border: item.answer ? "none" : "1px dashed #999"
         }}
@@ -109,9 +100,6 @@ console.log("data", data)
     </li>
   ))}
 </ul>
-
-
-      <Button>submit</Button>
     </div>
   );
 };

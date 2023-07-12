@@ -11,10 +11,11 @@ import Arrow from "./Pages/Arrow/Arrow";
 import DropDown from "./Pages/DropDown/DropDown";
 import FormSteps from "./Components/CreateQuiz/FormComponents/FormSteps";
 import Q from "./Components/Fill-in-the-blanks/Q";
-import DnD from "./Pages/Dragdrop/DnD";
 import Try from "./Pages/Dragdrop/Try";
 import DnDTable from "./Pages/Dragdrop/DnDTable";
 import DragPic from "./Pages/Dragdrop/DragPic";
+import DnD from "./Pages/Dragdrop/DnD";
+import FormS from "./Components/CreateQuiz/FormComponents/FormS";
 
 const App = () => {
   return (
@@ -22,6 +23,8 @@ const App = () => {
       <NavBar />
       <Routes>
       <Route path="/FormSteps" element={<FormSteps />} />
+      <Route path="/FormS" element={<FormS />} />
+
       <Route path="/fill-in-the-blanks-2" element={<Q />} />
       <Route path="/DnD" element={<DnD />} />
       <Route path="/Try" element={<Try />} />

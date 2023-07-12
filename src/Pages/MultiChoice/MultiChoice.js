@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { questions } from "../../Components/MultiChoice/questions";
 import PopUp from "../../Components/MultiChoice/PopUp/PopUp";
 import {  Card } from "react-bootstrap";

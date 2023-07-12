@@ -2,15 +2,14 @@ import { Form, Button } from 'antd';
 import TextArea from 'antd/es/input/TextArea';
 import React from 'react';
 
-const Step1 = () => {
+const FillForm = ({ setParagraph }) => {
   const [form] = Form.useForm();
 
   const handleSubmit = () => {
     form.validateFields().then((values) => {
-      const paragraphObject = {
-        paragraph: values.textarea,
-      };
-      console.log('Input value:', paragraphObject);
+      const updatedParagraph = values.textarea?.replace(/\n/g, ' ');
+      setParagraph(updatedParagraph);
+      console.log('Input value:', updatedParagraph);
     });
   };
 
@@ -29,4 +28,4 @@ const Step1 = () => {
   );
 };
 
-export default Step1;
+export default FillForm;

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import { Button, Form, Switch } from "antd";
 import "./Step.css";
 
-const Step2 = () => {
+const TrueFalseForm 
+  = () => {
   const [form] = Form.useForm();
   const [answers, setAnswers] = useState([
     { text: "", isCorrect: true, correctAnswer: "" },
@@ -161,8 +161,8 @@ const Step2 = () => {
                                   />
                                 </Form.Item>
                               )}
-                              <div>
-                              <Button onClick={handleAddAnswer}>Add</Button>
+                              <div style={{justifyContent:"space-between", display:"flex"}}>
+                              <Button onClick={handleAddAnswer} style={{marginRight:"4px"}}>Add</Button>
 
                                 <Button
                                   onClick={() => handleDeleteAnswer(index)}
@@ -186,4 +186,4 @@ const Step2 = () => {
   );
 };
 
-export default Step2;
+export default TrueFalseForm;

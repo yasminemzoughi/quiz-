@@ -1,13 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
-import { DeleteOutlined, UploadOutlined } from "@ant-design/icons";
-import { Button, Form } from "antd";
+// import {  UploadOutlined } from "@ant-design/icons";
+import { Button, Form, Input } from "antd";
 import "./Step.css";
 
-const Step5 = () => {
+const PicForm = ( {setList,uploadedImage,setUploadedImage}) => {
   const [form] = Form.useForm();
   const [answers, setAnswers] = useState([]);
   const [editedAnswerIndex, setEditedAnswerIndex] = useState(null);
+// upload an image 
+// const [uploadedImage, setUploadedImage] = useState(null);
+const [showImg, setShowImg] = useState(false);
+
+
+const handleImageUpload = (event) => {
+  const file = event.target.files[0];
+  setUploadedImage(file);
+  setShowImg(true)
+};
 
 
   const handleFinishAnswer = () => {
@@ -55,16 +65,29 @@ const Step5 = () => {
   };
   const handleSaveAnswers = () => {
     const answerObjects = answers.map((answer, index) => ({
-      answer: answer.text,
-      index: index + 1,
+      terme: answer.text,
+      correspondant: index + 1,
     }));
-
-    console.log(answerObjects);
+    setList([...answerObjects]);
+    console.log("answerObjects",answerObjects)
   };
+  useEffect(() => {
+    handleSaveAnswers();
+  }, [answers]);
 
   return (
     <div style={{ lineHeight: "0" }}>
-      <Button icon={<UploadOutlined />}>Click to Upload</Button>
+{/* <Button icon={<UploadOutlined />}>
+  Click to Upload */}
+  <Input type="file" accept="image/*"   style={{margin:"4px"}} onChange={handleImageUpload} />
+{/* </Button> */}
+{showImg ? <img
+  style={{ width: '70%', height: 'auto', margin:"2px"}}
+  src={uploadedImage ? URL.createObjectURL(uploadedImage) : 'default-image-path.jpg'}
+  alt='Uploaded Image'
+/> : null }
+
+
       <Form form={form} onFinish={handleFinishAnswer}>
         <Form.Item name="answer" label="item">
           <div style={{ display: "flex", marginBottom: "0" }}>
@@ -150,10 +173,10 @@ const Step5 = () => {
         </div>
       </div>
       <Button style={{ margin: "1%" }} onClick={handleSaveAnswers}>
-        Save
+        Save 
       </Button>
     </div>
   );
 };
 
-export default Step5;
+export default PicForm;

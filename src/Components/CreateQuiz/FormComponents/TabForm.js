@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Button, Form, Input, Table } from 'antd';
 
-const Step3 = () => {
+const TabForm = () => {
   const EditableContext = React.createContext(null);
 
   const EditableRow = ({ index, ...props }) => {
@@ -27,6 +27,7 @@ const Step3 = () => {
     const [editing, setEditing] = useState(false);
     const inputRef = useRef(null);
     const form = useContext(EditableContext);
+    
 
     useEffect(() => {
       if (editing) {
@@ -45,14 +46,19 @@ const Step3 = () => {
       try {
         const values = await form.validateFields();
         toggleEdit();
-        handleSave({
-          ...record,
-          ...values,
-        }, dataIndex); // Pass dataIndex to handleSave
+        handleSave(
+          {
+            ...record,
+            ...values,
+          },
+          dataIndex
+        ); // Pass dataIndex to handleSave
 
         console.log(`${dataIndex}: Value:`, values[dataIndex]);
         const arrayColumn = { column: dataIndex, value: values[dataIndex] };
-        setMyArray(prevArray => [...prevArray, arrayColumn]);
+
+        // Update the array of column values
+        setMyArray((prevArray) => [...prevArray, arrayColumn]);
       } catch (errInfo) {
         console.log('Save failed:', errInfo);
       }
@@ -119,7 +125,6 @@ const Step3 = () => {
     setDataSource(newData);
   };
 
-
   const defaultColumns = [
     {
       title: (
@@ -154,11 +159,7 @@ const Step3 = () => {
         dataSource.length >= 1 ? (
           <div>
             <Button onClick={() => handleDelete(record.key)}>Delete</Button>
-            <Button
-              onClick={handleAdd}
-              type="primary"
-              style={{ marginLeft: '10px' }}
-            >
+            <Button onClick={handleAdd} type="primary" style={{ marginLeft: '10px' }}>
               Add a row
             </Button>
           </div>
@@ -216,6 +217,7 @@ const Step3 = () => {
 
   return (
     <div style={{ lineHeight: '0' }}>
+      <p>tab form</p>
       <Table
         components={components}
         rowClassName={() => 'editable-row'}
@@ -228,4 +230,4 @@ const Step3 = () => {
   );
 };
 
-export default Step3;
+export default TabForm;
