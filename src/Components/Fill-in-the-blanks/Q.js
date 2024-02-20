@@ -13,7 +13,7 @@ const Step2 = () => {
   };
 
   useEffect(() => {
-    const regex = /"([^"]*)"/g;
+    const regex = /"([^"]*)"/g; 
     const words = paragraph.match(regex);
 
     if (words) {
